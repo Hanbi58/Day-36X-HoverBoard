@@ -34,11 +34,12 @@ body {
   background-color: rgb(31, 31, 31);
   margin: 2px;
   border-radius: 2px;
-  /* transition: all 1s ease-in-out; */
+  transition: all 1s ease-in-out;
 }
 
-/* .box:hover {
-  background-color: var(--randomco);
+.box:hover {
+  /* background-color: var(--randomco);
   transition: all 1s 1s ease-in-out;
-  box-shadow: 0 0 1px 1px var(--randomco);
-} */
+  box-shadow: 0 0 1px 1px var(--randomco); */
+  transition-duration: 0s;
+}

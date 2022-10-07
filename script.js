@@ -41,13 +41,13 @@ const boxes = document.querySelectorAll(".box");
 boxes.forEach((box) => {
   box.addEventListener("mouseenter", () => {
     const color = getColor();
-    box.style.backgroundColor = "none";
-    box.style.transition = "none";
+    // box.style.backgroundColor = "none";
+    // box.style.transition = "none";
     box.style.backgroundColor = color;
     box.style.boxShadow = `0 0 2px 2px ${color}`;
   });
   box.addEventListener("mouseleave", () => {
-    box.style.transition = "all 1s ease-in-out";
+    // box.style.transition = "all 1s ease-in-out";
     box.style.backgroundColor = "rgb(31, 31, 31)";
     box.style.boxShadow = "none";
   });
