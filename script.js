@@ -25,12 +25,17 @@ function getColor() {
 }
 
 const container = document.querySelector(".container");
+const root = document.documentElement;
 
-for (let i = 0; i < 126; i++) {
-  const box = document.createElement("div");
-  box.classList.add("box");
-  container.appendChild(box);
+function setColor() {
+  root.style.setProperty("--randomco", getColor());
 }
+
+let innerh = "";
+for (let i = 0; i < 126; i++) {
+  innerh += '<div class="box" onmouseover=setColor()></div>';
+}
+container.innerHTML = innerh;
 
 const boxes = document.querySelectorAll(".box");
 
@@ -45,10 +50,10 @@ const boxes = document.querySelectorAll(".box");
 //     box.style.boxShadow = "none";
 //   });
 // });
-const root = document.documentElement;
-boxes.forEach((box) => {
-  box.addEventListener("mouseenter", () => {
-    const color = getColor();
-    root.style.setProperty("--randomco", color);
-  });
-});
+// const root = document.documentElement;
+// boxes.forEach((box) => {
+//   box.addEventListener("mouseenter", () => {
+//     const color = getColor();
+//     root.style.setProperty("--randomco", color);
+//   });
+// });
