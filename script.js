@@ -25,25 +25,26 @@ function getColor() {
 }
 
 const container = document.querySelector(".container");
+// const root = document.documentElement;
 
 for (let i = 0; i < 126; i++) {
   const box = document.createElement("div");
   box.classList.add("box");
+  //   box.onmouseover = setColor;
+  //   box.innerHTML = '<div class="box" onmouseover = setColor()></div>';
+
   container.appendChild(box);
 }
 
 const boxes = document.querySelectorAll(".box");
-let root = document.documentElement;
-boxes.forEach((box) => {
-  box.addEventListener("mouseenter", (e) => {
-    const color = getColor();
-    box.style.backgroundColor = color;
-    box.style.boxShadow = `0px 0px 2px 2px ${color}`;
 
-    // const randomColor = getRanCo();
-    // console.log(randomColor);
-    // root.style.setProperty("--randomc", "blue");
-    // console.log(root.style.getPropertyValue("--randomc"));
+boxes.forEach((box) => {
+  box.addEventListener("mouseenter", () => {
+    const color = getColor();
+    box.style.backgroundColor = "none";
+    box.style.transition = "none";
+    box.style.backgroundColor = color;
+    box.style.boxShadow = `0 0 2px 2px ${color}`;
   });
   box.addEventListener("mouseleave", () => {
     box.style.transition = "all 1s ease-in-out";

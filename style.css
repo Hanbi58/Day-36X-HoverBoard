@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --randomco: red;
+  --randomco: hsl(8.84006, 117.513%, 50%);
 }
 
 * {
@@ -39,6 +39,6 @@ body {
 
 /* .box:hover {
   background-color: var(--randomco);
-  transition: none;
+  transition: all 1s 1s ease-in-out;
   box-shadow: 0 0 1px 1px var(--randomco);
 } */
